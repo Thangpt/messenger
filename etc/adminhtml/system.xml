@@ -51,8 +51,8 @@
                    showInStore="1">
                 <label>Customize the extension</label>
                 <field id="title_tab" translate="label" type="text" sortOrder="15" showInDefault="1" showInWebsite="0" showInStore="0">
-                    <label>Title Tab Open</label>
-                    <comment><![CDATA[Input the text for open tab. Default: Open]]></comment>
+                    <label>Title Tab</label>
+                    <comment><![CDATA[Input the text for open tab.]]></comment>
                 </field>
                 <field id="tab_color" translate="label" type="text" sortOrder="25" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Tab Color</label>

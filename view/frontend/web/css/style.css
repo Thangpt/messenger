@@ -145,7 +145,8 @@
 }
 
 .powered-by a {
-    font-size: 12px;
+    font-size: 14px;
     font-style: italic;
     color: #90949c;
+    margin-right: 10pt;
 }

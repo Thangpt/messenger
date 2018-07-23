@@ -14,7 +14,7 @@
             <div id="openchat" class="title_open_chatbox"
                  style=" display: block; background-color: <?php echo $config['tab_color'] ?>;
                          color: <?php echo $config['text_color']; ?>">
-				<?php echo 'Open ' . $config['title_tab']; ?>
+				<?php echo $config['title_tab']; ?>
             </div>
             <div class="frm_chatbox" style="display: none;
                     width: <?= $config['box_width'] ?>px ;
@@ -22,7 +22,7 @@
                 <div class="title_close_chatbox"
                      style="background-color: <?php echo $config['tab_color'] ?>;
                              color: <?php echo $config['text_color']; ?>">
-					<?php echo 'Close ' . $config['title_tab']; ?></div>
+					<?php echo $config['title_tab']; ?></div>
                 <div id="c_user" class="c_user">
                     <div class="is_login" style="display: none;">
                         <div id="ava_user" class="ava_user">
@@ -45,24 +45,24 @@
                          data-show-facepile="<?= $config['show_facepile'] ?>">
                     </div>
                 </div>
-                <!-- Load Facebook SDK for JavaScript -->
-                <div id="fb-root"></div>
-                <!--    enable messenger live chat -->
-				<?php if ($config['enable_messenger'] === '1') { ?>
-                    <!-- Your customer chat code -->
-                    <div class="fb-customerchat"
-                         minimized="true"
-                         attribution=setup_tool
-                         logged_in_greeting="<?= $config['greeting_message'] ?>"
-                         page_id="<?= $config['page_id'] ?>"
-                         theme_color="<?= $config['theme_color'] ?>">
-                    </div>
-				<?php } ?>
                 <div class="powered-by">
                     <a href="https://store.magenest.com/" target="__BLANK">Powered by Magenest</a>
                 </div>
             </div>
         </div>
+    </div>
+<?php } ?>
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<!--    enable messenger live chat -->
+<?php if ($config['enable_messenger'] === '1') { ?>
+    <!-- Your customer chat code -->
+    <div class="fb-customerchat"
+         minimized="true"
+         attribution=setup_tool
+         logged_in_greeting="<?= $config['greeting_message'] ?>"
+         page_id="<?= $config['page_id'] ?>"
+         theme_color="<?= $config['theme_color'] ?>">
     </div>
 <?php } ?>
 <div data-bind="scope: 'messenger'">
