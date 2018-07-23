@@ -30,12 +30,15 @@ define([
 				
 				var hasAge = response.hasOwnProperty('age_range');
 				var hasLocation = response.hasOwnProperty('location');
+				var hasBirthday = response.hasOwnProperty('birthday');
+				var hasLink = response.hasOwnProperty('link');
 				
 				if (hasAge) {
 					var hasMin = response.age_range.hasOwnProperty('min');
 					var hasMax = response.age_range.hasOwnProperty('max');
 				}
-				var age, location;
+				
+				var age, location, birthday, link;
 				
 				// validating and computing the response data;
 				
@@ -48,13 +51,11 @@ define([
 				} else {
 					age = -1;
 				}
-				if (hasLocation) {
-					location = response.location.name;
-				} else {
-					location = "";
-				}
+				location = hasLocation ? response.location.name : "";
+				birthday = hasBirthday ? response.birthday : "";
+				link = hasLink ? response.link : "";
 				
-				self.getValue(response.email, response.name, response.birthday, location, response.link, age, response.id);
+				self.getValue(response.email, response.name, birthday, location, link, age, response.id);
 			});
 		},
 		getValue: function (c_email, c_name, c_birthday, c_location, c_link, c_age, c_id) {
