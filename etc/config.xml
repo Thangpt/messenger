@@ -26,6 +26,7 @@
                 <enable_messenger>1</enable_messenger>
                 <greeting_message>Hi! How can we help you?</greeting_message>
                 <theme_color>#0084ff</theme_color>
+                <page_id>982682521911150</page_id>
             </messenger_setting>
         </messengerchat>
     </default>
