@@ -45,6 +45,7 @@
                          data-show-facepile="<?= $config['show_facepile'] ?>">
                     </div>
                 </div>
+                <div id="fb-root"></div>
                 <div class="powered-by">
                     <a href="https://store.magenest.com/" target="__BLANK">Powered by Magenest</a>
                 </div>
@@ -53,7 +54,6 @@
     </div>
 <?php } ?>
 <!-- Load Facebook SDK for JavaScript -->
-<div id="fb-root"></div>
 <!--    enable messenger live chat -->
 <?php if ($config['enable_messenger'] === '1') { ?>
     <!-- Your customer chat code -->
