@@ -39,7 +39,7 @@ class MessengerSupport extends Template implements \Magento\Widget\Block\BlockIn
 			'app_id'         => $this->getPageGeneralConfig('app_id'),
 			'tabs_setting'   => $this->getPageGeneralConfig('tabs_setting'),
 			'small_header'   => $this->getPageGeneralConfig('small_header'),
-			'show_cover'     => $this->getPageGeneralConfig('show_cover'),
+			'hide_cover'     => $this->revertShow(),
 			'show_facepile'  => $this->getPageGeneralConfig('show_facepile'),
 			
 			'title_tab'  => $this->getPageCustomConfig('title_tab'),
@@ -80,6 +80,16 @@ class MessengerSupport extends Template implements \Magento\Widget\Block\BlockIn
 		$size = $this->getPageCustomConfig('box_size');
 		if ($size === 'medium') return 480;
 		else if ($size === 'large') return 600;
+	}
+	
+	/**
+	 * @return string
+	 */
+	private function revertShow()
+	{
+		$value = $this->getPageGeneralConfig('show_cover');
+		if ($value === 'true') return 'false';
+		elseif ($value === 'false') return 'true';
 	}
 	
 }
