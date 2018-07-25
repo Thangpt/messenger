@@ -39,14 +39,15 @@ class MessengerSupport extends Template implements \Magento\Widget\Block\BlockIn
 			'app_id'         => $this->getPageGeneralConfig('app_id'),
 			'tabs_setting'   => $this->getPageGeneralConfig('tabs_setting'),
 			'small_header'   => $this->getPageGeneralConfig('small_header'),
-			'hide_cover'     => $this->getPageGeneralConfig('hide_cover'),
+			'show_cover'     => $this->getPageGeneralConfig('show_cover'),
 			'show_facepile'  => $this->getPageGeneralConfig('show_facepile'),
 			
 			'title_tab'  => $this->getPageCustomConfig('title_tab'),
 			'tab_color'  => $this->getPageCustomConfig('tab_color'),
 			'text_color' => $this->getPageCustomConfig('text_color'),
-			'box_width'  => $this->getPageCustomConfig('box_width'),
-			'box_height' => $this->getPageCustomConfig('box_height'),
+			'text_font' => $this->getPageCustomConfig('text_font'),
+			'box_width'  => $this->getBoxWidth(),
+			'box_height' => $this->getBoxHeight(),
 			
 			'user_url' => $this->getUrl(self::USER_URL),
 		];
@@ -65,6 +66,20 @@ class MessengerSupport extends Template implements \Magento\Widget\Block\BlockIn
 	private function getPageCustomConfig($attr)
 	{
 		return $this->_scopeConfig->getValue(self::PAGE_CUSTOM_CONFIG_PATH . $attr);
+	}
+	
+	private function getBoxWidth()
+	{
+		$size = $this->getPageCustomConfig('box_size');
+		if ($size === 'medium') return 300;
+		else if ($size === 'large') return 375;
+	}
+	
+	private function getBoxHeight()
+	{
+		$size = $this->getPageCustomConfig('box_size');
+		if ($size === 'medium') return 480;
+		else if ($size === 'large') return 600;
 	}
 	
 }

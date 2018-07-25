@@ -12,15 +12,20 @@
     <div id="chatbox" class="chatbox " style="width: <?= $config['box_width'] ?>px ;">
         <div id="chatbox_en" class="chatbox_en" style="display: block;">
             <div id="openchat" class="title_open_chatbox"
-                 style=" display: block; background-color: <?php echo $config['tab_color'] ?>;
+                 style=" display: block;
+                         background-color: <?php echo $config['tab_color'] ?>;
+                         font-family: <?php echo $config['text_font'] ?>;
                          color: <?php echo $config['text_color']; ?>">
 				<?php echo $config['title_tab']; ?>
             </div>
-            <div class="frm_chatbox" style="display: none;
+            
+            <div class="frm_chatbox"
+                 style="display: none;
                     width: <?= $config['box_width'] ?>px ;
                     height: <?= $config['box_height'] ?>px ;">
                 <div class="title_close_chatbox"
                      style="background-color: <?php echo $config['tab_color'] ?>;
+                             font-family: <?php echo $config['text_font'] ?>;
                              color: <?php echo $config['text_color']; ?>">
 					<?php echo $config['title_tab']; ?></div>
                 <div id="c_user" class="c_user">
@@ -39,7 +44,7 @@
                          data-href="<?php echo $config['link_page'] ?>"
                          data-tabs="<?= $config['tabs_setting'] ?>"
                          data-small-header="<?= $config['small_header'] ?>"
-                         data-hide-cover="<?= $config['hide_cover'] ?>"
+                         data-hide-cover="<?= $config['show_cover'] ?>"
                          data-width="<?= $config['box_width'] ?>"
                          data-height="<?= $config['box_height'] - 100 ?>"
                          data-show-facepile="<?= $config['show_facepile'] ?>">
@@ -52,6 +57,8 @@
                     <div class="fb-customerchat"
                          minimized="true"
                          attribution=setup_tool
+                         greeting_dialog_display = "fade"
+                         greeting_dialog_delay = 2
                          logged_in_greeting="<?= $config['greeting_message'] ?>"
                          page_id="<?= $config['page_id'] ?>"
                          theme_color="<?= $config['theme_color'] ?>">

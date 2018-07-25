@@ -36,10 +36,10 @@
                     <source_model>Magenest\Messenger\Model\Config\TrueFalse</source_model>
                     <comment><![CDATA[Use the small version of the page header. Default: Yes]]></comment>
                 </field>
-                <field id="hide_cover" translate="label" type="select" sortOrder="0" showInDefault="1" showInWebsite="0" showInStore="0">
-                    <label>Hide Cover Photo</label>
+                <field id="show_cover" translate="label" type="select" sortOrder="0" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Show Cover Photo</label>
                     <source_model>Magenest\Messenger\Model\Config\TrueFalse</source_model>
-                    <comment><![CDATA[Hide cover photo in the header. Default: No]]></comment>
+                    <comment><![CDATA[Show cover photo in the header. Default: Yes]]></comment>
                 </field>
                 <field id="show_facepile" translate="label" type="select" sortOrder="0" showInDefault="1" showInWebsite="0" showInStore="0">
                     <label>Show Friend's Faces</label>
@@ -64,14 +64,15 @@
                     <frontend_model>Magenest\Messenger\Model\Config\Color</frontend_model>
                     <comment><![CDATA[Select color code for text in tabs. Default: #f5f9fa]]></comment>
                 </field>
-                <field id="box_width" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0">
-                    <label>Extension Width</label>
-                    <comment><![CDATA[Input number width of extension box. Default: 300, Max:500]]></comment>
+                <field id="text_font" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Text Font</label>
+                    <source_model>Magenest\Messenger\Model\Config\Fonts</source_model>
+                    <comment><![CDATA[Choose the font family to display from a collection of 6 best Google Web fonts]]></comment>
                 </field>
-
-                <field id="box_height" translate="label" type="text" sortOrder="55" showInDefault="1" showInWebsite="0" showInStore="0">
-                    <label>Extension Height</label>
-                    <comment><![CDATA[Input number height of extension box. Default: 480]]></comment>
+                <field id="box_size" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Extension Box Size</label>
+                    <source_model>Magenest\Messenger\Model\Config\BoxSize</source_model>
+                    <comment><![CDATA[Choose the size to display of extension box]]></comment>
                 </field>
             </group>
         </section>
