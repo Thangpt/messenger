@@ -9,7 +9,7 @@ define([
 	'ko',
 	'jquery',
 	'underscore'
-], function (Component, ko, $, ) {
+], function (Component, ko, $) {
 	'use strict';
 	var self;
 	return Component.extend({
@@ -17,7 +17,6 @@ define([
 			self = this;
 			this._super();
 			// appID  import from components
-			console.log(this.app_config);
 			this.initChatBox();
 		},
 		getInfo: function () {
@@ -71,11 +70,11 @@ define([
 					birthday_user: c_birthday,
 					location_user: c_location,
 					linkfb_user: c_link,
-					age_user: c_age,
+					age_user: c_age
 				},
 				showLoader: true,
 				success: function () {
-				},
+				}
 			});
 		},
 		addBox: function () {
@@ -109,6 +108,6 @@ define([
 				self.addBox();
 				return false;
 			});
-		},
+		}
 	});
 });
