@@ -18,12 +18,14 @@ class MessengerSupport extends Template implements \Magento\Widget\Block\BlockIn
 	 * @param Template\Context $context
 	 * @param array            $data
 	 */
+    protected $localeResolver;
 	public function __construct(
 		Template\Context $context,
+        \Magento\Framework\Locale\Resolver $localeResolver,
 		array $data = []
 	) {
 		parent::__construct($context, $data);
-		
+		$this->localeResolver=$localeResolver;
 	}
 	
 	public function getConfig()
@@ -91,5 +93,9 @@ class MessengerSupport extends Template implements \Magento\Widget\Block\BlockIn
 		if ($value === 'true') return 'false';
 		elseif ($value === 'false') return 'true';
 	}
+//    public function getLocale()
+//    {
+//        return $this->localeResolver->getLocale();
+//    }
 	
 }

@@ -44,10 +44,10 @@ class User extends \Magento\Framework\App\Action\Action
 			if ($this->checkExist($_POST['email_user'])) {
 				$collection->setUserName($_POST['name_user']);
 				$collection->setUserEmail($_POST['email_user']);
-				$collection->setUserBirthday($_POST['birthday_user']);
-				$collection->setUserLocation($_POST['location_user']);
-				$collection->setUserLinkfb($_POST['linkfb_user']);
-				$collection->setUserAge($_POST['age_user']);
+//				$collection->setUserBirthday($_POST['birthday_user']);
+//				$collection->setUserLocation($_POST['location_user']);
+//				$collection->setUserLinkfb($_POST['linkfb_user']);
+//				$collection->setUserAge($_POST['age_user']);
 				$collection->save();
 			}
 		}

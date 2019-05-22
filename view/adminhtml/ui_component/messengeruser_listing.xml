@@ -159,41 +159,41 @@
                 </item>
             </argument>
         </column>
-        <column name="user_birthday">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">text</item>
-                    <item name="label" xsi:type="string" translate="true">Birthday</item>
-                    <item name="sortOrder" xsi:type="number">50</item>
-                </item>
-            </argument>
-        </column>
-        <column name="user_location">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">text</item>
-                    <item name="label" xsi:type="string" translate="true">Location</item>
-                    <item name="sortOrder" xsi:type="number">60</item>
-                </item>
-            </argument>
-        </column>
-        <column name="user_linkfb">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">text</item>
-                    <item name="label" xsi:type="string" translate="true">Link Facebook</item>
-                    <item name="sortOrder" xsi:type="number">70</item>
-                </item>
-            </argument>
-        </column>
-        <column name="user_age">
-            <argument name="data" xsi:type="array">
-                <item name="config" xsi:type="array">
-                    <item name="filter" xsi:type="string">text</item>
-                    <item name="label" xsi:type="string" translate="true">Age</item>
-                    <item name="sortOrder" xsi:type="number">80</item>
-                </item>
-            </argument>
-        </column>
+        <!--<column name="user_birthday">-->
+            <!--<argument name="data" xsi:type="array">-->
+                <!--<item name="config" xsi:type="array">-->
+                    <!--<item name="filter" xsi:type="string">text</item>-->
+                    <!--<item name="label" xsi:type="string" translate="true">Birthday</item>-->
+                    <!--<item name="sortOrder" xsi:type="number">50</item>-->
+                <!--</item>-->
+            <!--</argument>-->
+        <!--</column>-->
+        <!--<column name="user_location">-->
+            <!--<argument name="data" xsi:type="array">-->
+                <!--<item name="config" xsi:type="array">-->
+                    <!--<item name="filter" xsi:type="string">text</item>-->
+                    <!--<item name="label" xsi:type="string" translate="true">Location</item>-->
+                    <!--<item name="sortOrder" xsi:type="number">60</item>-->
+                <!--</item>-->
+            <!--</argument>-->
+        <!--</column>-->
+        <!--<column name="user_linkfb">-->
+            <!--<argument name="data" xsi:type="array">-->
+                <!--<item name="config" xsi:type="array">-->
+                    <!--<item name="filter" xsi:type="string">text</item>-->
+                    <!--<item name="label" xsi:type="string" translate="true">Link Facebook</item>-->
+                    <!--<item name="sortOrder" xsi:type="number">70</item>-->
+                <!--</item>-->
+            <!--</argument>-->
+        <!--</column>-->
+        <!--<column name="user_age">-->
+            <!--<argument name="data" xsi:type="array">-->
+                <!--<item name="config" xsi:type="array">-->
+                    <!--<item name="filter" xsi:type="string">text</item>-->
+                    <!--<item name="label" xsi:type="string" translate="true">Age</item>-->
+                    <!--<item name="sortOrder" xsi:type="number">80</item>-->
+                <!--</item>-->
+            <!--</argument>-->
+        <!--</column>-->
     </columns>
 </listing>
